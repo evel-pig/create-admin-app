@@ -85,7 +85,7 @@ const templateGeneratedFiles = [
   'public',
   'server',
   'src',
-  '.adminrc.js',
+  '.epigrc.js',
   '.gitignore',
   '.gitlab-ci.yml',
   '.webpackrc.js',
@@ -258,6 +258,9 @@ function run(root, appName, originalDirectory) {
       return install(root, buildInDependencies, false).then(() => '');
     })
     .then(() => {
+      return initialCommit();
+    })
+    .then(() => {
       success(root, appName, originalDirectory);
     })
     .catch(error => {
@@ -382,6 +385,41 @@ function initGit() {
       }
       resolve();
     });
+  });
+}
+
+function initialCommit() {
+  return new Promise((resolve, reject) => {
+    const command = 'git';
+    let args = [
+      'add',
+      '-A',
+    ];
+
+    function getError(c, a) {
+      return new Error(`${c} ${a.join(' ')}`);
+    }
+
+    try {
+      const result1 = spawn.sync(command, args, { stdio: 'inherit' });
+      if (result1.status === 0) {
+        args = [
+          'commit',
+          '-m',
+          '"Initial commit"',
+        ];
+        const result2 = spawn.sync(command, args, { stdio: 'inherit' });
+        if (result2.status !== 0) {
+          reject(getError(command, args));
+        }
+      } else {
+        reject(getError(command, args));
+      }
+    } catch (err) {
+      reject(getError(command, args));
+    }
+
+    resolve();
   });
 }
 
