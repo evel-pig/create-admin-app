@@ -1,6 +1,6 @@
 {
   "name": "@epig/create-admin-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "create a admin app",
   "main": "index.js",
   "scripts": {
