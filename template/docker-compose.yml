@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    #build: .
+    image: "admin-test"
+    volumes:
+     - ./logs/admin-test:/root/.pm2/logs
+    environment:
+     - API_SERVER=xxx.xxx.xxx.xxx:8000
+     - API_PATH=/admin
+     - HTTPS=false
+    ports:
+     - "8000:8000"

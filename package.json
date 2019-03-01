@@ -1,0 +1,45 @@
+{
+  "name": "@epig/create-admin-app",
+  "version": "0.0.1",
+  "description": "create a admin app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged",
+    "lint": "eslint"
+  },
+  "author": "infeng",
+  "license": "ISC",
+  "bin": {
+    "epig-create-admin-app": "./index.js"
+  },
+  "lint-staged": {
+    "./*.js": [
+      "eslint"
+    ]
+  },
+  "files": [
+    "template",
+    "index.js",
+    "createAdminApp.js"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "husky": "^0.14.3",
+    "lerna": "^2.11.0",
+    "lint-staged": "^7.1.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.17.1",
+    "copy": "^0.3.2",
+    "cross-spawn": "^6.0.5",
+    "fs-extra": "^7.0.0",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}

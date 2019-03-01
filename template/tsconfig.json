@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./tslib/",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "plugins": [{ "name": "tslint-language-service" }],
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "skipLibCheck": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "./src/.@epig/admin-tools"
+  ]
+}
