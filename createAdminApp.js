@@ -274,7 +274,7 @@ function run(root, appName, originalDirectory) {
       }
       console.log();
 
-      const knownGeneratedFiles = [...templateGeneratedFiles, 'package.json', 'node_modules'];
+      const knownGeneratedFiles = [...templateGeneratedFiles, 'package.json', 'node_modules', 'package-lock.json', 'tslib'];
       exit(root, appName, knownGeneratedFiles);
     });
   });
