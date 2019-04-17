@@ -1,5 +1,7 @@
 # 管理后台脚手架
 
+> 已废弃，合并到 [@epig/create-react-app](https://github.com/evel-pig/create-react-app)
+
 ## 使用说明
 
 ```bash
