@@ -100,7 +100,7 @@ class User extends BasicComponent<UserProps, any> {
 
 ### 数据层（models）
 
-`model` 是action、saga和reducer的集合，使用 [@epig/admin-tools](https://github.com/evel-pig/admin-tools#%E5%88%9B%E5%BB%BAmodel) 提供的工具快速创建。
+`model` 是action、saga和reducer的集合，使用 [vscode-admin](https://github.com/infeng/vscode-admin) 提供的代码块 `adminmodel` 和 `adminlistmodel` 快速创建。
 
 ```bash
 npx epig-admin-tools model /system/users/model -- --modelName users
