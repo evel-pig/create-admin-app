@@ -31,7 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "husky": "^0.14.3",
-    "lerna": "^2.11.0",
+    "lerna": "^6.5.1",
     "lint-staged": "^7.1.2"
   },
   "dependencies": {
